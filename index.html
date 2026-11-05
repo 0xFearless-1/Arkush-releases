@@ -115,6 +115,19 @@ h1 span { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -w
 }
 @media (prefers-reduced-motion: reduce) { .beam { animation: none; } html { scroll-behavior: auto; } }
 
+.shot { padding-top: 8px; }
+.window {
+  max-width: 900px; margin: 0 auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(20, 30, 50, .06), 0 30px 70px rgba(20, 30, 70, .22);
+  overflow: hidden;
+}
+.window .chrome { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--bg-2); border-bottom: 1px solid var(--line); }
+.window .chrome i { width: 11px; height: 11px; border-radius: 50%; background: var(--line); display: block; }
+.window .chrome span { margin-left: 8px; font-size: .8rem; color: var(--muted); }
+.window img { display: block; width: 100%; height: auto; background: #fff; }
+.shot-note { text-align: center; color: var(--muted); font-size: .9rem; margin: 16px 0 0; }
+
 section { padding: 64px 0; }
 section.alt { background: var(--bg-2); }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.02em; margin: 0 0 8px; }
@@ -263,6 +276,16 @@ footer a { color: var(--muted); }
     </div>
   </div>
 
+  <section class="shot" aria-label="Screenshot">
+    <div class="wrap">
+      <div class="window">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span id="shot-title">Аркуш 1.4.1 - сканування</span></div>
+        <img id="shot-img" src="assets/app.png" width="1060" height="690" alt="Головне вікно програми Аркуш: профілі, вибір сканера й джерела, три відскановані сторінки та кнопка «Зберегти»" loading="lazy">
+      </div>
+      <p class="shot-note" data-i="shot_note">Усе на одному екрані: вибрали сканер, натиснули «Сканувати», зберегли. Інтерфейс програми українською.</p>
+    </div>
+  </section>
+
   <section id="features">
     <div class="wrap">
       <h2 data-i="f_title">Що вміє</h2>
@@ -370,6 +393,8 @@ footer a { color: var(--muted); }
       donate_short: "Підтримати",
       info: "64-бітна Windows. Установка не потрібна.",
       sums: "SHA-256", all: "Усі версії",
+      shot_note: "Усе на одному екрані: вибрали сканер, натиснули «Сканувати», зберегли. Інтерфейс програми українською.",
+      shot_alt: "Головне вікно програми Аркуш: профілі, вибір сканера й джерела, три відскановані сторінки та кнопка «Зберегти»",
       f_title: "Що вміє", f_sub: "Усе потрібне для щоденного сканування, без зайвих кнопок.",
       c1_t: "USB і мережеві сканери", c1_p: "WIA і eSCL / AirScan. Мережеві сканери знаходить сама, а зміну їх IP помічає.",
       c2_t: "PDF, JPEG, TIFF, PNG, DOCX", c2_p: "Один багатосторінковий PDF або окремі файли. Профілі «Документ», «Фото», «Чернетка».",
@@ -401,6 +426,8 @@ footer a { color: var(--muted); }
       donate_short: "Support",
       info: "64-bit Windows. No installation needed.",
       sums: "SHA-256", all: "All versions",
+      shot_note: "Everything on one screen: pick a scanner, press Scan, save. The app interface is in Ukrainian.",
+      shot_alt: "Arkush main window: profiles, scanner and source selection, three scanned pages and the Save button",
       f_title: "What it does", f_sub: "Everything you need for everyday scanning, without extra buttons.",
       c1_t: "USB and network scanners", c1_p: "WIA and eSCL / AirScan. It finds network scanners by itself and notices when their IP changes.",
       c2_t: "PDF, JPEG, TIFF, PNG, DOCX", c2_p: "One multi-page PDF or separate files. Profiles for documents, photos and drafts.",
@@ -446,6 +473,7 @@ footer a { color: var(--muted); }
     document.title = l === "uk" ? "Аркуш - сканування для Windows" : "Arkush - a simple scanner app for Windows";
     document.querySelector(".brand").setAttribute("aria-label", l === "uk" ? "Аркуш" : "Arkush");
     document.getElementById("brand-name").textContent = l === "uk" ? "Аркуш" : "Arkush";
+    document.getElementById("shot-img").alt = d.shot_alt;
     renderRelease();
   }
 
