@@ -348,7 +348,7 @@ footer a { color: var(--muted); }
       <div class="faq">
         <details><summary data-i="q1_t">Сканер не знайдено</summary><p data-i="q1_p">Перевірте, що сканер увімкнений. Мережевий сканер з іншої підмережі додайте кнопкою «Додати мережевий…», ввівши його IP-адресу.</p></details>
         <details><summary data-i="q2_t">Кнопки розпізнавання тексту неактивні</summary><p data-i-html="q2_p">Потрібен Microsoft Visual C++ Redistributable 2015-2022 (x64), а папка <code>tessdata</code> має лежати поруч з <code>Arkush.exe</code>.</p></details>
-        <details><summary data-i="q3_t">Як оновитися</summary><p data-i-html="q3_p">Коли вийде нова версія, у рядку стану з'явиться «Доступна версія …». Клік відкриє сторінку завантаження. Розпакуйте новий архів поверх старої папки: налаштування зберігаються окремо, у <code>%APPDATA%\Arkush</code>.</p></details>
+        <details><summary data-i="q3_t">Як оновитися</summary><p data-i-html="q3_p">Починаючи з версії 1.4.3, програма оновлюється сама: нову версію вона завантажує у фоні, перевіряє контрольні суми й встановлює при закритті. Вимкнути це можна у «Налаштуваннях» (тоді вона спершу питатиме). Версії 1.4.2 і старші оновіть один раз вручну: розпакуйте новий архів поверх старої папки. Налаштування зберігаються окремо, у <code>%APPDATA%\Arkush</code>.</p></details>
         <details><summary data-i="q4_t">Що програма відправляє в інтернет</summary><p data-i="q4_p">Лише один запит до github.com при запуску, щоб дізнатися про нову версію. Скани й документи нікуди не передаються.</p></details>
         <details><summary data-i="q5_t">Я користувався OwnScan. Що з налаштуваннями?</summary><p data-i="q5_p">До версії 1.4.0 програма називалася OwnScan. Налаштування підхопляться самі. Ярлики на старий OwnScan.exe треба перенаправити на Arkush.exe, а старий exe можна видалити.</p></details>
       </div>
@@ -411,7 +411,7 @@ footer a { color: var(--muted); }
       q_title: "Часті питання", q_sub: "Якщо щось не працює, почніть звідси.",
       q1_t: "Сканер не знайдено", q1_p: "Перевірте, що сканер увімкнений. Мережевий сканер з іншої підмережі додайте кнопкою «Додати мережевий…», ввівши його IP-адресу.",
       q2_t: "Кнопки розпізнавання тексту неактивні", q2_p: "Потрібен Microsoft Visual C++ Redistributable 2015-2022 (x64), а папка <code>tessdata</code> має лежати поруч з <code>Arkush.exe</code>.",
-      q3_t: "Як оновитися", q3_p: "Коли вийде нова версія, у рядку стану з'явиться «Доступна версія …». Клік відкриє сторінку завантаження. Розпакуйте новий архів поверх старої папки: налаштування зберігаються окремо, у <code>%APPDATA%\\Arkush</code>.",
+      q3_t: "Як оновитися", q3_p: "Починаючи з версії 1.4.3, програма оновлюється сама: нову версію вона завантажує у фоні, перевіряє контрольні суми й встановлює при закритті. Вимкнути це можна у «Налаштуваннях» (тоді вона спершу питатиме). Версії 1.4.2 і старші оновіть один раз вручну: розпакуйте новий архів поверх старої папки. Налаштування зберігаються окремо, у <code>%APPDATA%\\Arkush</code>.",
       q4_t: "Що програма відправляє в інтернет", q4_p: "Лише один запит до github.com при запуску, щоб дізнатися про нову версію. Скани й документи нікуди не передаються.",
       q5_t: "Я користувався OwnScan. Що з налаштуваннями?", q5_p: "До версії 1.4.0 програма називалася OwnScan. Налаштування підхопляться самі. Ярлики на старий OwnScan.exe треба перенаправити на Arkush.exe, а старий exe можна видалити.",
       d_title: "Подобається Аркуш?", d_p: "Програма безкоштовна й такою лишиться. Якщо вона зекономила вам час, можете пригостити автора кавою.", d_btn: "Пригостити кавою",
@@ -444,7 +444,7 @@ footer a { color: var(--muted); }
       q_title: "FAQ", q_sub: "If something does not work, start here.",
       q1_t: "No scanner found", q1_p: "Make sure the scanner is on. For a network scanner on another subnet, use \"Add network…\" and enter its IP address.",
       q2_t: "Text recognition options are greyed out", q2_p: "You need Microsoft Visual C++ Redistributable 2015-2022 (x64), and the <code>tessdata</code> folder must be next to <code>Arkush.exe</code>.",
-      q3_t: "How do I update", q3_p: "When a new version is out, the status bar shows \"Version … available\". Click it to open the download page. Unzip the new archive over the old folder: settings are stored separately in <code>%APPDATA%\\Arkush</code>.",
+      q3_t: "How do I update", q3_p: "Since version 1.4.3 the app updates itself: it downloads the new version in the background, verifies the checksums and installs it when you close the app. You can turn this off in Settings (it will then ask first). Versions 1.4.2 and older need one manual update: unzip the new archive over the old folder. Settings are stored separately in <code>%APPDATA%\\Arkush</code>.",
       q4_t: "What does the app send over the internet", q4_p: "Just one request to github.com at startup to check for a new version. Scans and documents are never transmitted.",
       q5_t: "I used OwnScan. What about my settings?", q5_p: "Before version 1.4.0 the app was called OwnScan. Your settings are picked up automatically. Point any shortcuts from the old OwnScan.exe to Arkush.exe, then delete the old exe.",
       d_title: "Enjoying Arkush?", d_p: "The app is free and will stay free. If it saved you time, you can buy the author a coffee.", d_btn: "Buy me a coffee",
